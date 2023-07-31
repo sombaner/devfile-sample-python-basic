@@ -1,14 +1,6 @@
-from flask import Flask
-import os
+from datetime import datetime
+from time import sleep
 
-app = Flask(__name__)
-
-@app.route('/')
-def hello():
-    return "Hello World!"
-
-if __name__ == '__main__':
-    port = os.environ.get('FLASK_PORT') or 8080
-    port = int(port)
-
-    app.run(port=port,host='0.0.0.0')
+print(f"Starting at {datetime.now()}")
+sleep(3)
+print(f"Ending 3 seconds later at {datetime.now()}")
